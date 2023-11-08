@@ -2,6 +2,7 @@ import express from 'express';
 import mongoose from 'mongoose';
 import dotenv from 'dotenv';
 import userRoutes from './routes/user.route.js';
+import authRouter from './routes/auth.route.js';
 
 
 dotenv.config(); // This loads the .env file into process.env
@@ -25,3 +26,4 @@ app.listen(3000, () => {
 
 
 app.use('/api/users', userRoutes);
+app.use('/api/auth', authRouter);
