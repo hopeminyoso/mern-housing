@@ -9,6 +9,8 @@ dotenv.config(); // This loads the .env file into process.env
 
 const app = express();
 
+app.use(express.json());
+
 // Connecting to MongoDB using Mongoose and process.env
 mongoose.connect(process.env.MONGODB_URI, {
  
