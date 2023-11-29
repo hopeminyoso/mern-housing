@@ -1,7 +1,11 @@
-/* eslint-disable no-undef */
 import { useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
-
+import { useDispatch, useSelector } from 'react-redux';
+import {
+  signInStart,
+  signInSuccess,
+  signInFailure,
+} from '../redux/user/userSlice';
 import OAuth from '../components/OAuth';
 
 export default function SignIn() {
@@ -74,4 +78,4 @@ export default function SignIn() {
       {error && <p className='text-red-500 mt-5'>{error}</p>}
     </div>
   );
-}  
+}
